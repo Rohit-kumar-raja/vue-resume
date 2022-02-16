@@ -9,9 +9,9 @@
               <!-- Copywrite -->
               <div class="copywrite_text fadeInUp" data-wow-delay="0.2s">
                 <div class="footer-logo">
-                  <a href="#"
+                  <router-link to="#"
                     ><img src="img/logo.png" alt="logo" /> CV Builder
-                  </a>
+                  </router-link>
                 </div>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -21,21 +21,21 @@
               </div>
               <!-- Social Icon -->
               <div class="footer-social-info fadeInUp" data-wow-delay="0.4s">
-                <a href="#"
+                <router-link to="#"
                   ><i class="fa fa-facebook" aria-hidden="true"></i
-                ></a>
-                <a href="#">
+                ></router-link>
+                <router-link to="#">
                   <i class="fa fa-twitter" aria-hidden="true"></i
-                ></a>
-                <a href="#"
+                ></router-link>
+                <router-link to="#"
                   ><i class="fa fa-google-plus" aria-hidden="true"></i
-                ></a>
-                <a href="#"
+                ></router-link>
+                <router-link to="#"
                   ><i class="fa fa-instagram" aria-hidden="true"></i
-                ></a>
-                <a href="#"
+                ></router-link>
+                <router-link to="#"
                   ><i class="fa fa-linkedin" aria-hidden="true"></i
-                ></a>
+                ></router-link>
               </div>
             </div>
           </div>
@@ -48,21 +48,21 @@
                 data-wow-delay="0.3s"
               >
                 <h5>PRIVACY &amp; TOS</h5>
-                <a href="">
+                <router-link to="">
                   <p>Advertiser Agreement</p>
-                </a>
-                <a href="">
+                </router-link>
+                <router-link to="">
                   <p>Acceptable Use Policy</p>
-                </a>
-                <a href="">
+                </router-link>
+                <router-link to="">
                   <p>Privacy Policy</p>
-                </a>
-                <a href="">
+                </router-link>
+                <router-link to="">
                   <p>Technology Privacy</p>
-                </a>
-                <a href="">
+                </router-link>
+                <router-link to="">
                   <p>Developer Agreement</p>
-                </a>
+                </router-link>
               </div>
             </div>
           </div>
@@ -75,21 +75,21 @@
                 data-wow-delay="0.2s"
               >
                 <h5>NAVIGATE</h5>
-                <a href="">
+                <router-link to="">
                   <p>Advertisers</p>
-                </a>
-                <a href="">
+                </router-link>
+                <router-link to="">
                   <p>Developers</p>
-                </a>
-                <a href="">
+                </router-link>
+                <router-link to="">
                   <p>Resources</p>
-                </a>
-                <a href="">
+                </router-link>
+                <router-link to="">
                   <p>Company</p>
-                </a>
-                <a href="">
+                </router-link>
+                <router-link to="">
                   <p>Connect</p>
-                </a>
+                </router-link>
               </div>
             </div>
           </div>

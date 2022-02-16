@@ -10,9 +10,11 @@
             <div class="cv-prev">
               <!-- Post Thumbnail -->
               <div class="blog_thumbnail">
-                <div class="table-responsive" style="position: relative; width: 100%; margin:auto;">
-                <Format1/>
-
+                <div
+                  class="table-responsive"
+                  style="position: relative; width: 100%; margin: auto"
+                >
+                  <Format1 :form_data="form" />
                 </div>
                 <!-- <img src="img/demos/demo-1.png" class="temp-img" alt="" /> -->
               </div>
@@ -37,7 +39,7 @@
               </div>
             </div>
             <div class="container">
-              <form method="post" action="#">
+              <form method="post" action="#" id="dashboard">
                 <div class="mt-150">
                   <h2>Personal Info</h2>
                   <div class="block-container">
@@ -60,10 +62,10 @@
                     <div class="mt-30">
                       <div class="row">
                         <div class="col-lg-6">
-                          <label>Full Name:</label>
+                          <label>Full Name: </label>
                           <input
                             type="text"
-                            name="full-name"
+                            v-model="form.name"
                             class="form-control"
                             placeholder="enter your name"
                           />
@@ -73,25 +75,17 @@
                           <label>Jop Title:</label>
                           <input
                             type="text"
-                            name="jop-title"
+                            v-model="form.job_title"
                             class="form-control"
                             placeholder="Ex: Web Developer"
                           />
                         </div>
-                        <div class="col-lg-6">
-                          <label>Your Address:</label>
-                          <input
-                            type="text"
-                            name="address"
-                            class="form-control"
-                            placeholder="enter your address"
-                          />
-                        </div>
+
                         <div class="col-lg-6">
                           <label>Your Email:</label>
                           <input
                             type="text"
-                            name="email"
+                            v-model="form.email"
                             class="form-control"
                             placeholder="enter your name"
                           />
@@ -100,7 +94,7 @@
                           <label>Website Link:</label>
                           <input
                             type="text"
-                            name="web-link"
+                            v-model="form.website_link"
                             class="form-control"
                             placeholder="enter your website link"
                           />
@@ -110,15 +104,32 @@
                           <label>Phone No:</label>
                           <input
                             type="text"
-                            name="phone"
+                            v-model="form.phone"
                             class="form-control"
-                            placeholder="Ex: Web Developer"
+                            placeholder="Ex: 9999999999"
                           />
+                        </div>
+                        <div class="col-lg-6">
+                          <label>Your Zipcode:</label>
+                          <input
+                            type="text"
+                            v-model="form.zipcode"
+                            class="form-control"
+                            placeholder="enter your zipcode"
+                          />
+                        </div>
+                        <div class="col-lg-12">
+                          <label>Your Address:</label>
+                          <textarea
+                            v-model="form.address"
+                            class="form-control"
+                            placeholder="enter your address"
+                          ></textarea>
                         </div>
                         <div class="col-lg-12">
                           <label>Your Bio Here</label>
                           <textarea
-                            name="comments"
+                            v-model="form.comments"
                             id="comments"
                             rows="4"
                             class="form-control"
@@ -129,7 +140,69 @@
                     </div>
                   </div>
                 </div>
+                <div class="clearfix"></div>
 
+                <div class="form-group add-social mt-s">
+                  <h2>Add social Links</h2>
+                  <div class="block-container">
+                    <div class="all-socials">
+                      <div class="new-skills">
+                        <div class="row">
+                          <div class="col-sm-6">
+                            <label>Social icon </label>
+                            <select
+                              type="text"
+                              v-model="socials_icon"
+                              class="form-control"
+                            >
+                              <option selected disabled>Select Social</option>
+                              <option value="fa fa-facebook">facebook</option>
+                              <option value="fa fa-twitter">twitter</option>
+                              <option value="fa fa-google">google</option>
+                              <option value="fa fa-linkedin">linkedin</option>
+                              <option value="fa fa-youtube">youtube</option>
+                              <option value="fa fa-instagram">instagram</option>
+                              <option value="fa fa-pinterest">pinterest</option>
+                              <option value="fa fa-snapchat-ghost">snapchat</option>
+                              <option value="fa fa-skype">skype</option>
+                              <option value="fa fa-android">android</option>
+                              <option value="fa fa-dribbble">dribbble</option>
+                              <option value="fa fa-vimeo">vimeo</option>
+                              <option value="fa fa-tumblr">tumblr</option>
+                              <option value="fa fa-vine">vine</option>
+                              <option value="fa fa-foursquare">foursquare</option>
+                              <option value="fa fa-stumbleupon">stumbleupon</option>
+                              <option value="fa fa-flickr">flickr</option>
+                              <option value="fa fa-yahoo">yahoo</option>
+                              <option value="fa fa-reddit">reddit</option>
+                              <option value="fa fa-rss">rss</option>
+                            </select>
+                          </div>
+                          <div class="col-sm-6">
+                            <label>Social Name</label>
+                            <input
+                              type="text"
+                              v-model="socials_name"
+                              class="form-control"
+                            />
+                          </div>
+                        </div>
+
+                        <label>Social Link</label>
+                        <input
+                          type="text"
+                          v-model="socials_link"
+                          class="form-control"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="add-blk add-socials btn btn-info mt-50">
+                      <i class="fa fa-plus"></i>
+                      <span>Add another social</span>
+                    </div>
+                  </div>
+                </div>
                 <div class="form-group add-edu">
                   <h2>Add Educations</h2>
                   <div class="all-edus">
@@ -259,41 +332,6 @@
                 <div class="clearfix"></div>
 
                 <div class="form-group add-social mt-s">
-                  <h2>Add social Links</h2>
-                  <div class="block-container">
-                    <div class="all-socials">
-                      <div class="new-skills">
-                        <label>Social Name</label>
-                        <input
-                          type="text"
-                          name="socials[]"
-                          class="form-control"
-                        />
-                        <label>Social Link</label>
-                        <input
-                          type="text"
-                          name="socials[]"
-                          class="form-control"
-                        />
-                        <label>Social icon image (16px*16px)</label>
-                        <input
-                          type="file"
-                          name="socials[]"
-                          class="form-control"
-                        />
-                      </div>
-                    </div>
-
-                    <div class="add-blk add-socials btn btn-info mt-50">
-                      <i class="fa fa-plus"></i>
-                      <span>Add another social</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="clearfix"></div>
-
-                <div class="form-group add-social mt-s">
                   <h2>Add Hoppies</h2>
                   <div class="block-container">
                     <div class="all-hoppies">
@@ -331,12 +369,24 @@
   </div>
 </template>
 <script>
-import Format1 from '../formats/exprince/format1.vue';
+import Format1 from "../formats/exprince/format1.vue";
 export default {
   name: "Dashboard",
-  components:{
+  components: {
     Format1,
-  }
+  },
+  data: () => ({
+    form: {
+      name: "Enter you name",
+      job_title: " Job title",
+      email: " Email address",
+      phone: " Phone number",
+      zipcode: " zip/pin code",
+      socials_name: [],
+      socials_icon: [],
+      socials_link: [],
+    },
+  }),
 };
 </script>
 

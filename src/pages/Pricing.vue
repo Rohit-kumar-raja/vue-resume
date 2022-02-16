@@ -48,7 +48,7 @@
                     animation-name: fadeInUp;
                   "
                 >
-                  <li class="breadcrumb-item"><a href="#">Home</a></li>
+                  <li class="breadcrumb-item"><router-link to="#">Home</router-link></li>
                   <li class="breadcrumb-item active" aria-current="page">
                     Pricing
                   </li>
@@ -83,7 +83,7 @@
                 <p>with 7days of Free Trial</p>
               </div>
               <div class="terms mt-30">
-                <a href="#">Terms &amp; Conditions </a>
+                <router-link to="#">Terms &amp; Conditions </router-link>
                 <p>subject to change with perior notice</p>
               </div>
             </div>
@@ -110,7 +110,7 @@
                   resume Templates and new added ones
                 </p>
 
-                <a href="contact-us.html" class="button mt-s">Get Started</a>
+                <router-link to="contact-us.html" class="button mt-s">Get Started</router-link>
               </div>
             </div>
           </div>
@@ -136,7 +136,7 @@
                   resume Templates and new added ones
                 </p>
 
-                <a href="contact-us.html" class="button mt-s">Get Started</a>
+                <router-link to="contact-us.html" class="button mt-s">Get Started</router-link>
               </div>
             </div>
           </div>

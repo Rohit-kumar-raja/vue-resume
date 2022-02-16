@@ -38,7 +38,7 @@
                     animation-name: fadeInUp;
                   "
                 >
-                  <li class="breadcrumb-item"><a href="#">Home</a></li>
+                  <li class="breadcrumb-item"><router-link to="#">Home</router-link></li>
                   <li class="breadcrumb-item active" aria-current="page">
                     Contact Us
                   </li>

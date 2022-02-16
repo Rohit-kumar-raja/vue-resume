@@ -47,7 +47,7 @@
                     animation-name: fadeInUp;
                   "
                 >
-                  <li class="breadcrumb-item"><a href="#">Home</a></li>
+                  <li class="breadcrumb-item"><router-link to="#">Home</router-link></li>
                   <li class="breadcrumb-item active" aria-current="page">
                     About us
                   </li>
@@ -175,7 +175,7 @@
                 <div class="icon-img-box">
                   <img src="img/icons/d1.png" alt="" />
                 </div>
-                <h3><a href="#">Easy Online Resume Builder</a></h3>
+                <h3><router-link to="#">Easy Online Resume Builder</router-link></h3>
                 <div class="text">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                   Laudantium modi assumenda.
@@ -187,7 +187,7 @@
                 <div class="icon-img-box">
                   <img src="img/icons/d2.png" alt="" />
                 </div>
-                <h3><a href="#">Step by Step Expert Tips</a></h3>
+                <h3><router-link to="#">Step by Step Expert Tips</router-link></h3>
                 <div class="text">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit skaj
                   gjska consectetur adipisicing elit.
@@ -199,7 +199,7 @@
                 <div class="icon-img-box">
                   <img src="img/icons/d3.png" alt="" />
                 </div>
-                <h3><a href="#">Recruiter Approved Phrases</a></h3>
+                <h3><router-link to="#">Recruiter Approved Phrases</router-link></h3>
                 <div class="text">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                   Laudantium modi.
@@ -225,8 +225,8 @@
                 ipsam. Magni, error. Tempora odit laborum iure inventore
                 possimus laboriosam qui nam. Fugit!
               </p>
-              <a class="btn dream-btn mt-30" href="templates.html"
-                >lets build your cv</a
+              <router-link class="btn dream-btn mt-30" to="templates.html"
+                >lets build your cv</router-link
               >
             </div>
           </div>
@@ -245,7 +245,7 @@
             </h2>
           </div>
           <div class="col-lg-3 col-lg-offset-1 col-md-3 col-sm-12 text-center">
-            <a href="contact-us.html" class="button mt-s">Send a Request</a>
+            <router-link to="contact-us.html" class="button mt-s">Send a Request</router-link>
           </div>
         </div>
       </div>

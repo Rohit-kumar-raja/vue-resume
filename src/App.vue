@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+
     <Header />
     <Register />
     <Login />
@@ -22,5 +23,7 @@ export default {
     Register,
     Footer,
   },
+
+ 
 };
 </script>

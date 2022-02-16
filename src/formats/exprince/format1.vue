@@ -2,7 +2,7 @@
   <div class="rela-block page">
     <div class="rela-block top-bar">
       <div class="caps name">
-        <div class="abs-center">Kyle J Shanks</div>
+        <div class="abs-center">{{ form_data.name }}</div>
       </div>
     </div>
     <div class="side-bar">
@@ -15,17 +15,32 @@
               fill="none"
             />
           </svg>
-          <p class="logo-text">kj</p>
+          <p class="logo-text">
+            {{
+              form_data.name[0] +
+              "." +
+              form_data.name.split(" ")[form_data.name.split(" ").length - 1]
+            }}
+          </p>
         </div>
       </div>
-      <p>123 My Place Drive</p>
-      <p>Astoria, New York 11105</p>
-      <p>1-800-CALLPLZ</p>
-      <p>emailsareforsquares@gmail.com</p>
+      <p class="format1">{{ form_data.address }} - {{ form_data.zipcode }}</p>
+
+      <p class="format1">
+        <i class="fa fa-envelope" aria-hidden="true"></i> {{ form_data.email }}
+      </p>
+
+      <p class="format1">
+        <i class="fa fa-phone-square"></i> {{ form_data.phone }}
+      </p>
+      <p class="format1" v-if="form_data.website_link != null">
+        <i class="fa fa-globe"></i> {{ form_data.website_link }}
+      </p>
       <br />
-      <p class="rela-block social twitter">Twitter stuff</p>
-      <p class="rela-block social pinterest">Pinterest things</p>
-      <p class="rela-block social linked-in">Linked-in man</p>
+      <p class="rela-block caps side-header">Social</p>
+      <p><i class="fab fa-facebook-f"></i> Twitter stuff</p>
+    
+
       <p class="rela-block caps side-header">Expertise</p>
       <p class="rela-block list-thing">HTML</p>
       <p class="rela-block list-thing">CSS (Stylus)</p>
@@ -38,7 +53,7 @@
       <p class="rela-block list-thing">Culinary af</p>
     </div>
     <div class="rela-block content-container">
-      <h2 class="rela-block caps title">Jr Front-End Developer</h2>
+      <h2 class="rela-block caps title">{{ form_data.job_title }}</h2>
       <div class="rela-block separator"></div>
       <div class="rela-block caps greyed">Profile</div>
       <p class="long-margin">
@@ -87,12 +102,26 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  name: "format1",
+
+  props: {
+    form_data: String,
+  },
+};
+</script>
+
 <style lang="css" scoped>
 * {
   box-sizing: border-box;
   transition: 0.35s ease;
 }
-
+.format1 {
+  width: 250px;
+  white-space: pre-line;
+}
 
 .rela-block {
   display: block;
@@ -130,7 +159,7 @@
 body {
   font-family: "Open Sans";
   letter-spacing: 0px;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 28px;
   background: url("http://kingofwallpapers.com/leaves/leaves-016.jpg") right
     no-repeat;
@@ -223,7 +252,7 @@ h3 {
   bottom: 0;
   width: 29%;
   background-color: #f7e0c1;
-  padding: 320px 30px 50px;
+  padding: 260px 30px 50px;
 }
 
 .mugshot {
@@ -272,7 +301,7 @@ h3 {
   right: 16%;
   cursor: pointer;
   font-family: "Montserrat";
-  font-size: 55px;
+  font-size: 45px;
   letter-spacing: 0px;
   font-weight: 400;
   line-height: 58.333333333333336px;
@@ -296,21 +325,6 @@ h3 {
   height: 35px;
   width: 35px;
   background-size: cover !important;
-}
-
-.social.twitter:before {
-  background: url("https://cdn3.iconfinder.com/data/icons/social-media-2026/60/Socialmedia_icons_Twitter-07-128.png")
-    center no-repeat;
-}
-
-.social.pinterest:before {
-  background: url("https://cdn3.iconfinder.com/data/icons/social-media-2026/60/Socialmedia_icons_Pinterest-23-128.png")
-    center no-repeat;
-}
-
-.social.linked-in:before {
-  background: url("https://cdn3.iconfinder.com/data/icons/social-media-2026/60/Socialmedia_icons_LinkedIn-128.png")
-    center no-repeat;
 }
 
 .side-header {
@@ -370,5 +384,12 @@ h3 {
     font-weight: 100;
     line-height: 100%;
   }
+}
+p {
+  color: #000;
+  margin-bottom: 0.2rem;
+}
+.fab{
+  font-size: 20px;
 }
 </style>

@@ -49,10 +49,10 @@
                   "
                 >
                   <li class="breadcrumb-item">
-                    <a href="index">Home</a>
+                    <router-link to="index">Home</router-link>
                   </li>
                   <li class="breadcrumb-item">
-                    <a href="templates">Template Preview</a>
+                    <router-link to="templates">Template Preview</router-link>
                   </li>
                   <li class="breadcrumb-item active" aria-current="page">
                     Template Preview
@@ -88,8 +88,8 @@
                   veniam, quis nostrud exercitation ullamco laboris nisi ut
                   aliquip ex ea.
                 </p>
-                <a class="btn dream-btn width-100" href="start"
-                  >Try This Template</a
+                <router-link class="btn dream-btn width-100" to="start"
+                  >Try This Template</router-link
                 >
               </div>
 

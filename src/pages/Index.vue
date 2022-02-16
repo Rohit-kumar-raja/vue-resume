@@ -26,8 +26,8 @@
                                     follow easy prompts to create the perfect job-ready resume.</p>
                                 <div class="dream-btn-group wow fadeInUp" data-wow-delay="0.4s"
                                     style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
-                                    <a href="templates" class="btn dream-btn green-btn mr-3">Choose Template</a>
-                                    <a href="contact" class="btn dream-btn green-btn"> contact us</a>
+                                    <router-link to="templates" class="btn dream-btn green-btn mr-3">Choose Template</router-link>
+                                    <router-link to="contact" class="btn dream-btn green-btn"> contact us</router-link>
                                 </div>
                             </div>
                         </div>
@@ -55,7 +55,7 @@
                                     <div class="icon-img-box">
                                         <img src="img/icons/d1.png" alt="">
                                     </div>
-                                    <h3><a href="#">Easy Online Resume Builder</a></h3>
+                                    <h3><router-link to="#">Easy Online Resume Builder</router-link></h3>
                                     <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                                         Laudantium modi assumenda.</div>
 
@@ -66,7 +66,7 @@
                                     <div class="icon-img-box">
                                         <img src="img/icons/d2.png" alt="">
                                     </div>
-                                    <h3><a href="#">Step by Step Expert Tips</a></h3>
+                                    <h3><router-link to="#">Step by Step Expert Tips</router-link></h3>
                                     <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit
                                         skaj
                                         gjska consectetur adipisicing elit.</div>
@@ -78,7 +78,7 @@
                                     <div class="icon-img-box">
                                         <img src="img/icons/d3.png" alt="">
                                     </div>
-                                    <h3><a href="#">Recruiter Approved Phrases</a></h3>
+                                    <h3><router-link to="#">Recruiter Approved Phrases</router-link></h3>
                                     <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                                         Laudantium modi.</div>
 
@@ -99,7 +99,7 @@
                                     natus
                                     reprehenderit eaque eum, autem ipsam. Magni, error. Tempora odit laborum iure inventore
                                     possimus laboriosam qui nam. Fugit!</p>
-                                <a class="btn dream-btn mt-30" href="templates">lets build your cv</a>
+                                <router-link class="btn dream-btn mt-30" to="templates">lets build your cv</router-link>
                             </div>
                         </div>
                     </div>
@@ -188,7 +188,7 @@
                             <h2 class="bold mb-0">Do you Need a Complete Custom CV Template?</h2>
                         </div>
                         <div class="col-lg-3 col-lg-offset-1 col-md-3 col-sm-12 text-center">
-                            <a href="contact" class="button mt-s">Send a Request</a>
+                            <router-link to="contact" class="button mt-s">Send a Request</router-link>
                         </div>
 
                     </div>
@@ -217,7 +217,7 @@
                                     <p> with 7days of Free Trial</p>
                                 </div>
                                 <div class="terms mt-30">
-                                    <a href="#">Terms &amp; Conditions </a>
+                                    <router-link to="#">Terms &amp; Conditions </router-link>
                                     <p>subject to change with perior notice</p>
                                 </div>
 
@@ -237,7 +237,7 @@
                                         new
                                         added ones</p>
 
-                                    <a href="contact" class="button mt-s">Get Started</a>
+                                    <router-link to="contact" class="button mt-s">Get Started</router-link>
                                 </div>
                             </div>
                         </div>
@@ -254,7 +254,7 @@
                                     <p>You will be billed per Year, and get unlimited access to all resume Templates and new
                                         added ones</p>
 
-                                    <a href="contact" class="button mt-s">Get Started</a>
+                                    <router-link to="contact" class="button mt-s">Get Started</router-link>
                                 </div>
                             </div>
                         </div>
@@ -278,39 +278,39 @@
 
                         <div class="col-lg-4 col-md-6 col-sm-12">
                             <div class="demo-item">
-                                <a href="preview"><img src="img/demos/demo-1.png" alt="demo"
-                                        class="img-responsive"></a>
+                                <router-link to="preview"><img src="img/demos/demo-1.png" alt="demo"
+                                        class="img-responsive"></router-link>
                                 <div class="preview-btn-wrapper text-center">
-                                    <a href="preview" class="preview-demo">See template <i
-                                            class="fa fa-long-arrow-right"></i></a>
-                                    <a href="start" class="preview-demo v2">Use template <i
-                                            class="fa fa-long-arrow-right"></i></a>
+                                    <router-link to="preview" class="preview-demo">See template <i
+                                            class="fa fa-long-arrow-right"></i></router-link>
+                                    <router-link to="start" class="preview-demo v2">Use template <i
+                                            class="fa fa-long-arrow-right"></i></router-link>
                                 </div>
                             </div>
                         </div>
 
                         <div class="col-lg-4 col-md-6 col-sm-12">
                             <div class="demo-item">
-                                <a href="templates"><img src="img/demos/demo-2.png" alt="demo"
-                                        class="img-responsive"></a>
+                                <router-link to="templates"><img src="img/demos/demo-2.png" alt="demo"
+                                        class="img-responsive"></router-link>
                                 <div class="preview-btn-wrapper text-center">
-                                    <a href="templates" class="preview-demo">See template <i
-                                            class="fa fa-long-arrow-right"></i></a>
-                                    <a href="preview" class="preview-demo v2">Use template <i
-                                            class="fa fa-long-arrow-right"></i></a>
+                                    <router-link to="templates" class="preview-demo">See template <i
+                                            class="fa fa-long-arrow-right"></i></router-link>
+                                    <router-link to="preview" class="preview-demo v2">Use template <i
+                                            class="fa fa-long-arrow-right"></i></router-link>
                                 </div>
                             </div>
                         </div>
 
                         <div class="col-lg-4 col-md-6 col-sm-12">
                             <div class="demo-item">
-                                <a href="preview"><img src="img/demos/demo-3.png" alt="demo"
-                                        class="img-responsive"></a>
+                                <router-link to="preview"><img src="img/demos/demo-3.png" alt="demo"
+                                        class="img-responsive"></router-link>
                                 <div class="preview-btn-wrapper text-center">
-                                    <a href="preview" class="preview-demo">See template <i
-                                            class="fa fa-long-arrow-right"></i></a>
-                                    <a href="start" class="preview-demo v2">Use template <i
-                                            class="fa fa-long-arrow-right"></i></a>
+                                    <router-link to="preview" class="preview-demo">See template <i
+                                            class="fa fa-long-arrow-right"></i></router-link>
+                                    <router-link to="start" class="preview-demo v2">Use template <i
+                                            class="fa fa-long-arrow-right"></i></router-link>
                                 </div>
                             </div>
                         </div>
